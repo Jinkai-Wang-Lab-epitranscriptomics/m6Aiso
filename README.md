@@ -1,5 +1,6 @@
 
 # m6anet
+![alt text](./figure/Train.png)
 
 m6aiso is a python tool that based on semi supervised framework to detect m6A modifications from nanopore direct RNA sequencing.
 
@@ -49,15 +50,11 @@ The output files are stored in ``/path/to/output``:
 
 ## m6A Prediction
 
-Once `m6aiso current_signal_abstract_for_m6A_pred` finished, we can run `m6aiso molecular_m6A_predication` based on the data prepare output:
+Once `m6aiso m6Aiso molecular_m6A_predication` finished, we can run `m6aiso molecular_m6A_predication` based on the data prepare output:
 ```
-    python -m m6aiso current_signal_abstract_for_m6A_pred
-                            --model_path path/to/output
-                            --model_type path/to/output
-                            --using_signal_filename
-                            --predict_result_filename
-                            --max_value_filename
-                            --min_value_filename
+    python -m m6aiso m6Aiso molecular_m6A_predication
+                            --using_signal_filename current_signal.tsv
+                            --predict_result_filename molecular_m6A_prob.txt
 ```
 
 ## semi supervised model training
@@ -66,11 +63,11 @@ In order to training model based on semi supervised framework, we can run `m6ais
 ```
     python -m m6aiso semi_supervised_model_train
                             --model_name AttentionNet,Res1dNet,Res2dNet
-                            --orginal_pos_filename 
-                            --orginal_neg_filename
-                            --max_value_filename
-                            --min_value_filename
-                            --out_dir
+                            --orginal_pos_filename m6A positive dataset generated signal file
+                            --orginal_neg_filename m6A negative dataset generated signal file
+                            --max_value_filename max value of current signal mean,std and dwelltime
+                            --min_value_filename min value of current signal mean,std and dwelltime
+                            --out_dir /path/output/
 ```
 
 # Getting help
