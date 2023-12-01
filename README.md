@@ -2,7 +2,7 @@
 # m6Aiso
 ![alt text](./figure/Train.png)
 
-m6aiso is a python tool that based on endogenously labeled m6A modified signals and semi supervised framework to detect m6A modifications from nanopore direct RNA sequencing.
+m6aiso is a python tool that utilizes endogenously labeled m6A modified signals and a semi-supervised framework to detect m6A modifications from nanopore direct RNA sequencing.
 
 # Table of Contents
 - **[Running m6Aiso](#running-m6aiso)**<br>
@@ -12,6 +12,8 @@ m6aiso is a python tool that based on endogenously labeled m6A modified signals 
     - **[m6A Prediction](#m6A-prediction)**<br>
     - **[Model Training](#semi-supervised-model-training)**<br>
 - **[Getting Help](#getting-help)**<br>
+- **[Contribution](#contribution)**<br>
+- **[Contacts](#contacts)**<br>
 - **[Citing](#citing-m6aiso)**<br>
 - **[Contributors](#contributors)**<br>
 - **[License](#license)**<br>
@@ -34,7 +36,7 @@ m6Aiso requires [Python version 3.7 or higher](https://www.python.org). To insta
 $ pip install m6Aiso
 ```
 
-## Data prepare
+## Data preparation
 
 m6Aiso data preparation requires eventalign.tsv from ``nanopolish eventalign``:
 ```
@@ -59,9 +61,9 @@ After running nanopolish eventalign, we need to preprocess the segmented raw sig
 The output files are stored in ``/path/to/output``:
 
 
-## m6A Prediction
+## m6A prediction
 
-Once `m6aiso m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can run `m6aiso molecular_m6A_predication` based on the data preparation output and m6Aiso model:
+Once `m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can run `m6Aiso molecular_m6A_predication` based on the data preparation output and m6Aiso model:
 
 ```
     python -m m6Aiso molecular_m6A_predication 
@@ -69,9 +71,9 @@ Once `m6aiso m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can r
                             --predict_result_filename molecular_m6A_prob.txt
 ```
 
-## Semi supervised model training
+## Semi-supervised model training
 
-If you want training new model based on semi supervised framework, we can run `m6aiso semi_supervised_model_train` based on the data prepared by youself:
+If you want to train a new model based on semi-supervised framework, you can run `m6Aiso semi_supervised_model_train` based on the data prepared by youself:
 ```
     python -m m6Aiso semi_supervised_model_train
                             --model_name AttentionNet,Res1dNet,Res2dNet
