@@ -1,4 +1,3 @@
-
 # m6Aiso
 ![alt text](./figure/Train.png)
 
@@ -12,7 +11,6 @@ m6aiso is a python tool that utilizes endogenously labeled m6A modified signals 
     - **[m6A Prediction](#m6A-prediction)**<br>
     - **[Model Training](#semi-supervised-model-training)**<br>
 - **[Getting Help](#getting-help)**<br>
-- **[Contribution](#contribution)**<br>
 - **[Contacts](#contacts)**<br>
 - **[Citing](#citing-m6aiso)**<br>
 - **[Contributors](#contributors)**<br>
@@ -86,11 +84,7 @@ If you want to train a new model based on semi-supervised framework, you can run
 
 # Getting help
 
-We appreciate your feedback and questions! You can report any error or suggestion related to m6Aiso as an issue on [github]().
-
-# Contribution
-
-We appreciate contributions on bug fixes and potential new features. Thank you!
+We appreciate your feedback and questions! You can report any error or suggestion related to m6Aiso as an issue on [github](https://github.com/Jinkai-Wang-Lab-epitranscriptomics/m6Aiso/issues).
 
 # Contacts
 
@@ -106,7 +100,7 @@ If you use m6Aiso in your research, please cite
 
 # Contributors
 
-This package is developed and maintaned by [WangJing Kai] [WenBing Guo] and [ZhiJun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. Thank you.
+This package is developed and maintaned by WangJing Kai WenBing Guo and [ZhiJun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. We appreciate contributions on bug fixes and potential new features. Thank you!
 
 # License
 m6Anet is licensed under the terms of the MIT license.
