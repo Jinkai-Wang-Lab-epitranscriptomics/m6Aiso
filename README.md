@@ -70,7 +70,7 @@ In this step, you can predict the modification probability at each DRACH site fo
                             --predict_result_filename <molecular_m6A_prob.txt>
 ```
 
-A paired threshold (0.1, 0.9) is recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
+The double cutoff 0.9 and 0.1 is recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
 
 ## Semi-supervised model training
 
