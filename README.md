@@ -52,7 +52,7 @@ After running nanopolish eventalign, we need to preprocess the segmented raw sig
 ```
     python -m m6Aiso current_signal_abstract_for_m6A_pred 
                             --nanopolish_result <out.tsv.gzip>
-                            --number the number of each batchs
+                            --number <the number of each batchs>
                             --out_dir /path/to/output
 ```
 
@@ -65,8 +65,8 @@ Once `m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can run `m6A
 
 ```
     python -m m6Aiso molecular_m6A_predication 
-                            --using_signal_filename signal.tsv 
-                            --predict_result_filename molecular_m6A_prob.txt
+                            --using_signal_filename <signal.tsv >
+                            --predict_result_filename <molecular_m6A_prob.txt>
 ```
 
 ## Semi-supervised model training
@@ -74,9 +74,9 @@ Once `m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can run `m6A
 If you want to train a new model based on semi-supervised framework, you can run `m6Aiso semi_supervised_model_train` based on the data prepared by youself:
 ```
     python -m m6Aiso semi_supervised_model_train
-                            --model_name AttentionNet,Res1dNet,Res2dNet
-                            --orginal_pos_filename modified_signal.tsv
-                            --orginal_neg_filename unmodified_signal.tsv
+                            --model_name <AttentionNet,Res1dNet,Res2dNet>
+                            --orginal_pos_filename <modified_signal.tsv>
+                            --orginal_neg_filename <unmodified_signal.tsv>
                             --max_value_filename 
                             --min_value_filename
                             --out_dir
@@ -95,12 +95,12 @@ ZhiJun Ren: renzhj7@mail.sysu.edu.cn
 # Citing m6Aiso
 
 If you use m6Aiso in your research, please cite
-[XXXXXXXXXXXXXXXX]()
+[Endogenous labeling empowers accurate detection of m6A from single long reads of direct RNA sequencing](XXXX)
 
 
 # Contributors
 
-This package is developed and maintaned by WangJing Kai WenBing Guo and [ZhiJun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. We appreciate contributions on bug fixes and potential new features. Thank you!
+This package is developed and maintaned by Jinkai Wang, Wenbing Guo and [Zhijun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. We appreciate contributions on bug fixes and potential new features. Thank you !
 
 # License
-m6Anet is licensed under the terms of the MIT license.
+m6Aiso is licensed under the terms of the MIT license.
