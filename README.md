@@ -1,7 +1,7 @@
 # m6Aiso
 ![alt text](./figure/Train.png)
 
-m6aiso is a python tool that utilizes endogenously labeled m6A modified signals and a semi-supervised framework to detect m6A modifications from nanopore direct RNA sequencing.
+m6Aiso is a convolutional neural network (CNN)-based model designed for the detection of m6A modifications from nanopore direct RNA sequencing data. The model is developed by leveraging endogenously labeled m6A-modified signals and a semi-supervised framework.
 
 # Table of Contents
 - **[Running m6Aiso](#running-m6aiso)**<br>
@@ -36,18 +36,19 @@ $ pip install m6Aiso
 
 ## Data preparation
 
-m6Aiso data preparation requires eventalign.tsv from ``nanopolish eventalign``:
+m6Aiso relies on the output from Nanopolish eventalign function, which segments the continuous ionic current signals from each read into 5-mer events and provides their corresponding transcriptome coordinates:
 ```
     nanopolish eventalign 
                             --reads <in.fasta> 
                             --bam <in.bam> 
-                            --genome <genome.fa> 
+                            --genome <transcriptome.fa> 
                             --signal-index
                             --scale-events 
                             --summary <summary.txt> | gzip > <out.tsv.gzip>
 ```
+*Note: Please provide the transcriptome reference instead of the genomic reference.
 
-After running nanopolish eventalign, we need to preprocess the segmented raw signal file using 'm6Aiso current_signal_abstract_for_m6A_pred':
+After running nanopolish eventalign, you can extract features (including the mean, standard deviation and dwell time) for the 5-mers at DRACH sites, as well as the features from one-base-pair flanking the DRACH sites using 'm6Aiso current_signal_abstract_for_m6A_pred':
 
 ```
     python -m m6Aiso current_signal_abstract_for_m6A_pred 
@@ -61,22 +62,24 @@ The output files are stored in ``/path/to/output``:
 
 ## m6A prediction
 
-Once `m6Aiso current_signal_abstract_for_m6A_pred` was finished, we can run `m6Aiso molecular_m6A_predication` based on the data preparation output and m6Aiso model:
+In this step, you can predict the modification probability at each DRACH site for each read based on the features obtained from last step and m6Aiso model. Please run:
 
 ```
     python -m m6Aiso molecular_m6A_predication 
-                            --using_signal_filename <signal.tsv >
+                            --using_signal_filename <signal.tsv>
                             --predict_result_filename <molecular_m6A_prob.txt>
 ```
+
+The double cutoff 0.9 and 0.1 is recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
 
 ## Semi-supervised model training
 
 If you want to train a new model based on semi-supervised framework, you can run `m6Aiso semi_supervised_model_train` based on the data prepared by youself:
 ```
     python -m m6Aiso semi_supervised_model_train
-                            --model_name AttentionNet,Res1dNet,Res2dNet
-                            --orginal_pos_filename modified_signal.tsv
-                            --orginal_neg_filename unmodified_signal.tsv
+                            --model_name <AttentionNet,Res1dNet,Res2dNet>
+                            --orginal_pos_filename <modified_signal.tsv>
+                            --orginal_neg_filename <unmodified_signal.tsv>
                             --max_value_filename 
                             --min_value_filename
                             --out_dir
@@ -84,7 +87,7 @@ If you want to train a new model based on semi-supervised framework, you can run
 
 # Getting help
 
-We appreciate your feedback and questions! You can report any error or suggestion related to m6Aiso as an issue on [github](https://github.com/Jinkai-Wang-Lab-epitranscriptomics/m6Aiso/issues).
+We appreciate your feedback and questions! You can report any errors or suggestions related to m6Aiso as an issue on [github](https://github.com/Jinkai-Wang-Lab-epitranscriptomics/m6Aiso/issues).
 
 # Contacts
 
@@ -100,7 +103,7 @@ If you use m6Aiso in your research, please cite
 
 # Contributors
 
-This package is developed and maintaned by Jinkai Wang, Wenbing Guo and [Zhijun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. We appreciate contributions on bug fixes and potential new features. Thank you !
+This package is developed and maintaned by Jinkai Wang, Wenbing Guo and [Zhijun Ren](https://github.com/ZJRen9). If you want to contribute, please leave an issue or submit a pull request. We appreciate contributions on bug fixes and potential new features. Thank you!
 
 # License
 m6Aiso is licensed under the terms of the MIT license.
