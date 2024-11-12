@@ -70,7 +70,7 @@ In this step, you can predict the modification probability at each DRACH site fo
                             --predict_result_filename <molecular_m6A_prob.txt>
 ```
 
-The double cutoff 0.9 and 0.1 is recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
+The double cutoffs 0.9 and 0.1 are recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
 
 ## Semi-supervised model training
 
@@ -92,13 +92,15 @@ We appreciate your feedback and questions! You can report any errors or suggesti
 # Contacts
 
 Jinkai Wang: wangjk@mail.sysu.edu.cn
-WenBing Guo: guowb9@mail2.sysu.edu.cn
-ZhiJun Ren: renzhj7@mail.sysu.edu.cn
+Wenbing Guo: guowb9@mail2.sysu.edu.cn
+Zhijun Ren: renzhj7@mail.sysu.edu.cn
 
 # Citing m6Aiso
 
 If you use m6Aiso in your research, please cite
-[Endogenous labeling empowers accurate detection of m6A from single long reads of direct RNA sequencing](XXXX)
+[Guo., W., Ren., Z., Huang., X., He., J., Zhang., J., Wu., Z., Guo., Y., Zhang., Z., Cun., 
+Y., and Wang., J. (2024). Endogenous labeling empowers accurate detection of 
+m6A from single long reads of direct RNA sequencing. bioRxiv](https://doi.org/10.1101/2024.01.30.577990)
 
 
 # Contributors
