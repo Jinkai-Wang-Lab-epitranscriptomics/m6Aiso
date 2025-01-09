@@ -70,11 +70,11 @@ In this step, you can predict the modification probability at each DRACH site fo
                             --predict_result_filename <molecular_m6A_prob.txt>
 ```
 
-The double cutoffs 0.9 and 0.1 are recommended. A sites within a read is considered as modifed if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
+The double cutoffs 0.9 and 0.1 are recommended. A sites within a read is considered as modified if its predicted modification probability exceeds 0.9, and it is considered as unmodified if the predicted modification probability is below 0.1.
 
 ## Semi-supervised model training
 
-If you want to train a new model based on semi-supervised framework, you can run `m6Aiso semi_supervised_model_train` based on the data prepared by youself:
+If you want to train a new model based on semi-supervised framework, you can run `m6Aiso semi_supervised_model_train` based on the data prepared by yourself:
 ```
     python -m m6Aiso semi_supervised_model_train
                             --model_name <AttentionNet,Res1dNet,Res2dNet>
