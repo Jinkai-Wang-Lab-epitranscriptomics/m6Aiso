@@ -98,9 +98,7 @@ Zhijun Ren: renzhj7@mail.sysu.edu.cn
 # Citing m6Aiso
 
 If you use m6Aiso in your research, please cite
-[Guo., W., Ren., Z., Huang., X., He., J., Zhang., J., Wu., Z., Guo., Y., Zhang., Z., Cun., 
-Y., and Wang., J. (2024). Endogenous labeling empowers accurate detection of 
-m6A from single long reads of direct RNA sequencing. bioRxiv](https://doi.org/10.1101/2024.01.30.577990)
+[Wenbing Guo, Zhijun Ren, Xiang Huang, Jiayin Liu, Jingwen Shao, Xiaojun Ma, Chuanchuan Wei, Yixian Cun, Jialiang He, Jie Zhang, Zehong Wu, Yang Guo, Zijun Zhang, Zhengming Feng, Jianbo He, Jinkai Wang (2025). Single-molecule m6A detection empowered by endogenous labeling unveils complexities across RNA isoforms. Mol.cell]([https://doi.org/10.1016/j.molcel.2025.01.014])(https://doi.org/10.1016/j.molcel.2025.01.014)
 
 
 # Contributors
