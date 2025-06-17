@@ -98,8 +98,7 @@ Zhijun Ren: renzhj7@mail.sysu.edu.cn
 # Citing m6Aiso
 
 If you use m6Aiso in your research, please cite:
-
-[Wenbing Guo, Zhijun Ren, Xiang Huang, Jiayin Liu, Jingwen Shao, Xiaojun Ma, Chuanchuan Wei, Yixian Cun, Jialiang He, Jie Zhang, Zehong Wu, Yang Guo, Zijun Zhang, Zhengming Feng, Jianbo He, Jinkai Wang, Single-molecule m6A detection empowered by endogenous labeling unveils complexities across RNA isoforms, Molecular Cell, 2025 Mar 20;85(6):1233-1246.e7.] (doi: [https://doi.org/10.1016/j.molcel.2025.01.014]). (https://doi.org/10.1016/j.molcel.2025.01.014)
+[Wenbing Guo, Zhijun Ren, Xiang Huang, Jiayin Liu, Jingwen Shao, Xiaojun Ma, Chuanchuan Wei, Yixian Cun, Jialiang He, Jie Zhang, Zehong Wu, Yang Guo, Zijun Zhang, Zhengming Feng, Jianbo He, Jinkai Wang, Single-molecule m6A detection empowered by endogenous labeling unveils complexities across RNA isoforms, Molecular Cell, 2025 Mar 20;85(6):1233-1246.e7.] (doi: [https://doi.org/10.1016/j.molcel.2025.01.014]).
 
 
 # Contributors
